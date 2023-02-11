@@ -24,14 +24,11 @@ var userSymbols = window.confirm("Would you like to include symbols")
 var userLowercase = window.confirm("Would you like to include lowecase")
 var userUppercase = window.confirm("Would you like to include uppercase")
 
-// user options after answered promts
-var userOptions =[];
-for (var i = 0; i < lowercaseList.length; i++){
-  uppercaseList(i) = lowercaseList(i). touppercase();
-}
+var userOptions =[]
+
 
 // user answers true to confirm statements
-if (userNumbers === true){
+if (userOptions === true){
   userOptions.push(numberList);
 }
 if (userSymbols === true){
@@ -54,12 +51,12 @@ generatePassword = "";
 
 // Randomize chosen items
 
-for (var i = 0; i < passlen; i++){
+for (var i = 0; i < passlen; i++)
   var randomList = getRandomItem(userOptions);
   var randomchar = getRandomItem(randomList);
 
   generatePassword += randomchar
-}
+
   
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
