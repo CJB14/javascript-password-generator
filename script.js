@@ -1,29 +1,64 @@
-//Assignment Code
+document.getElementById('generate').addEventListener('click', function() {
+  alert(generatePassword());
+});
 
-var generateBtn= document.querySelectorAll("#genrate")
+//Password Criteria
+passwordOptions = {
+number : "1234567890",
+symbol : "!@#$%&",
+uppercase : "abcdefghijklmnopqrstuvwxyz",
+lowercase : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
 
-var digits = prompt ("How maany digits do you want your password?");
-var lower = prompt("Do you want lower case? y or n");
-var upper = prompt("Do you want you want upper case? y or n");
-var numeric = prompt("Do you want numeric characters? y or n");
-var syn = prompt ("Do you want symbol? y or n");
+//Variables they want in password
+getnumbers: window.confirm("Would you like to include numbers in your password?"),
+getsymbol: window.confirm("Would you like to include symbols in your password?"),
+getuppercase: window.confirm("Would you like to include uppercase letters in your password?"),
+getLowerCase: window.confirm("Would you like to include lowercase letters in your password?")
 
-console.log(digits,lower,upper,numeric,syn);
+};
 
-//Write password to the #password input
+// Generate password
+generatePassword = function(){
+ var passwordlength = window.prompt("Enter the amount of characters you want for your password.");{
+    
+// Check to see if password length is correct
+if (passwordlength >= 8 && characterAmount <= 128){
+  window.alert("password must be between 8 and 128 characters")
 
-function WritePassword(){
+}}
 
-  var password = generatepassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.vaalue = password;
+// Ask to include numbers
+const  getnumber = window.confirm("Would you like to include numbers in your password?");{
+  
+  if (getnumber){
+    passInfo += passwordOptions.number;
+    passChars.push(getRandomChar(passwordOptions.number));
+  };
 }
+// Ask to include Symbol
+const getsymbol= window.confirm("Would you like to include symbols in your password?");
 
-//add event listener to generte button
+if (getsymbol) {
+  passInfo += passwordOptions.symbol;
+  passChars.push(getRandomChar(passwordOptions.symbol));
+};
 
-generateBtn.addEventLlisterner("click",WritePassword);
+// Ask to include lowercase
+const getlowerCase = window.confirm("Would you like to include lowercase letters in your password?");
 
+if (getlowerCase) {
+  passInfo += passwordOptions.lowerCase;
+  passChars.push(getRandomChar(passwordOptions.lowerCase));
+};
 
+// Ask to include uppercase
 
-const charactersUpper = ['A','B','C','D','E']
+const getuppercase = window.confirm("Would you like to include uppercase letters in your password?");
+
+if (getuppercase){
+  passInfo += passwordOptions.uppercase;
+  passChars.push(getuppercase(passwordOptions.uppercase));
+
+}
+}
