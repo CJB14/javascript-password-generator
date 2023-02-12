@@ -1,16 +1,14 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
 // Generate passcode
   function generatePassword(){
     
     var passlen = window.prompt("how many characters do you want your password");
 
-    If (passlen < 8 || passlen > 128) 
+    if (passlen < 8 || passlen > 128) 
     window.alert("Password length must be between 8 and 128 characters")
-    return;
-    }
+    
 // list password criteria
 
 var numberList =  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -24,6 +22,7 @@ var userSymbols = window.confirm("Would you like to include symbols")
 var userLowercase = window.confirm("Would you like to include lowecase")
 var userUppercase = window.confirm("Would you like to include uppercase")
 
+//Emty array options
 var userOptions =[]
 
 
@@ -45,18 +44,17 @@ if (userUppercase === true){
 if (userOptions.length === 0){
   userOptions.push(lowercaseList);
 }
-
 // empty string fill with password
-generatePassword = "";
+var generatedPassword = "";
 
 // Randomize chosen items
 
 for (var i = 0; i < passlen; i++)
-  var randomList = getRandomItem(userOptions);
-  var randomchar = getRandomItem(randomList);
+  var randomList = userOptions;
+  var randomchar = randomList;
 
-  generatePassword += randomchar
+  generatedPassword += randomchar
 
-  
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
