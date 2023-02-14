@@ -30,12 +30,12 @@ passLength = prompt("Select a password length: Mininum 8, Maximum 128.")
 if (passLength >= 8 || passLength <= 128) {
 console.log(passLength);
 } else {
-alert("Please be sure your response is a number between 8 and 128.")
+alert("Your password must be between 8 and 128.")
 return "";
 }
 
 // check for uppercase
-var passTypeUpper = confirm("Do you want to include UPPERCASE letters?")
+var passTypeUpper = confirm("Do you want to include uppercase letters in your password?")
 // add uppercase to charset if wanted
 if (passTypeUpper) {
 charset += uppercaseList
@@ -43,7 +43,7 @@ charset += uppercaseList
 
 
 // check for lowercase
-var passTypeLower = confirm("Do you want to include lowercase letters?")
+var passTypeLower = confirm("Do you want to include lowercase letters in your password?")
 // add lowercase to charset if wanted
 if (passTypeLower) {
 charset += lowercaseList
@@ -51,7 +51,7 @@ charset += lowercaseList
 
 
 // check for numbers
-var passTypeNum = confirm("Do you want to include numbers?")
+var passTypeNum = confirm("Do you want to include numbers i9n your password?")
 // add numbers to charset if wanted
 if (passTypeNum) {
 charset += numberList
@@ -59,7 +59,7 @@ charset += numberList
 
 
 // check for specials
-var passTypeSpec = confirm("Would you like to include symbols")
+var passTypeSpec = confirm("Would you like to include symbols in your password?")
 // add specials to charset if wanted
 if(passTypeSpec) {
 charset += symbolList
@@ -67,7 +67,7 @@ charset += symbolList
 
 
 if (!passTypeUpper && !passTypeLower && !passTypeNum && !passTypeSpec){
-alert("You must select at least one set of characters.")
+alert("Please select at least one set of characters.")
 return "";
 }
 

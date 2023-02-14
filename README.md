@@ -14,6 +14,13 @@ I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
 ```
 
+
+# Screenshot
+
+Screenshot 2023-02-13 at 8.15.56 PM-1.png
+
+
+
 ## Acceptance Criteria
 
 ```
