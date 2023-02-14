@@ -36,7 +36,6 @@ return "";
 
 // check for uppercase
 var passTypeUpper = confirm("Do you want to include uppercase letters in your password?")
-// add uppercase to charset if wanted
 if (passTypeUpper) {
 charset += uppercaseList
 }
@@ -44,7 +43,6 @@ charset += uppercaseList
 
 // check for lowercase
 var passTypeLower = confirm("Do you want to include lowercase letters in your password?")
-// add lowercase to charset if wanted
 if (passTypeLower) {
 charset += lowercaseList
 }
@@ -52,15 +50,12 @@ charset += lowercaseList
 
 // check for numbers
 var passTypeNum = confirm("Do you want to include numbers in your password?")
-// add numbers to charset if wanted
 if (passTypeNum) {
 charset += numberList
 }
 
 
-// check for specials
 var passTypeSpec = confirm("Would you like to include symbols in your password?")
-// add specials to charset if wanted
 if(passTypeSpec) {
 charset += symbolList
 }
