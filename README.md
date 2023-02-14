@@ -17,8 +17,6 @@ SO THAT I can create a strong password that provides greater security
 
 # Screenshot
 
-/Users/cameronburney/Desktop/Challenges/javascript-password-generator/Screenshot 2023-02-13 at 8.15.56 PM.png
-
 
 
 ## Acceptance Criteria
